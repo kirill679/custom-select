@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Custom select</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="Select.js"></script>
+</head>
+<body>
+<h1>Try to select other value</h1>
+<h2>Current value is: <span id="selectValue"></span></h2>
+<my-select options="HTML, CSS, JS, PHP" value="js" bg="darkseagreen"
+           color="darkslategrey"></my-select>
+
+<script>
+  const $select = document.querySelector('my-select')
+  const $selectValue = document.querySelector('#selectValue')
+
+  $selectValue.innerText = $select.getAttribute('value')
+  $select.addEventListener('select', (e) => $selectValue.innerText = e.detail)
+</script>
+</body>
+</html>

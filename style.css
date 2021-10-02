@@ -1,0 +1,61 @@
+/*
+Styles copied from:
+https://www.w3schools.com/howto/howto_custom_select.asp
+*/
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Helvetica, sans-serif;
+}
+
+my-select {
+    display: block;
+    position: relative;
+    width: 200px;
+    margin: 5px;
+    cursor: pointer;
+}
+
+my-select .arrow-down {
+    position: absolute;
+    top: 14px;
+    right: 10px;
+    width: 0;
+    height: 0;
+    border: 6px solid transparent;
+    border-color: #fff transparent transparent transparent;
+}
+
+my-select .option, my-select .selected {
+    display: block;
+    padding: 8px 16px;
+    border: 1px solid transparent;
+    border-color: transparent transparent rgba(0, 0, 0, 0.1) transparent;
+    min-height: 36px;
+    transition: 0.1s ease;
+}
+
+my-select .option:hover {
+    background-color: rgba(0, 0, 0, 0.1);
+}
+
+my-select .options {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    right: 0;
+    z-index: 99;
+    background-image: linear-gradient(rgba(255, 255, 255, 0.1), rgba(255, 255, 255, 0.1));
+}
+
+
+my-select .hidden {
+    display: none;
+}
+
+.same {
+    background-image: linear-gradient(rgba(255, 255, 255, 0.08), rgba(255, 255, 255, 0.08));
+}
